@@ -1,0 +1,136 @@
+/* Font form google font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Create tailwind components */
+@layer components {
+  /* created section title underline */
+  .title-underline {
+    @apply inline relative after:w-[86px]  after:h-[1px] after:bg-[#636363] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2;
+  }
+  /* Portfolio card overlay */
+  .card-overlay {
+    @apply after:w-full after:h-full after:inline-block;
+  }
+  .card-hover-icon {
+    @apply relative before:text-[#67DB52] before:flex before:justify-center before:items-center before:bg-[rgba(0,_0,_0,_0.62)] before:w-[95%] before:h-[95%]  before:absolute before:rounded-md before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:opacity-0 before:transition before:duration-300;
+  }
+}
+/* Create tailwind utilities */
+@layer utilities {
+  /* Portfolio card title overlay */
+  .card-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins" "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Reusable containers button class */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 flex items-center gap-2 white rounded-[5px] transition-all duration-300 ease-in-out outline outline-1 hover:bg-green-500 hover:text-white hover:outline-none bg-transparent;
+  }
+
+  .container-main {
+    @apply container mx-auto p-4;
+  }
+
+  .white {
+    @apply text-white;
+  }
+  .title {
+    @apply white mt-2 text-[1.8em] sm:text-[3em];
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+button,
+label,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
+.smillTitle {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px;
+}
+
+/*******  Force apply Styled ***********/
+/* Portfolio Section */
+.card-hover-icon:hover .card-icon-visibility {
+  opacity: 1 !important;
+}
+
+body {
+  background-color: #fff;
+}
+
+#blogSwiper .swiper-pointer-events {
+  padding: 0 45px;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+#blogSwiper .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+#blogSwiper .swiper-scrollbar-drag {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.normalText {
+  font-size: 14px;
+}
+
+.project-box {
+  /* background-image: url(https://themes.getbootstrap.com/wp-content/uploads/2021/05/soft-ui-design-system-thumbnail-1200x900.jpg); */
+  display: block;
+  padding-bottom: 30%;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-position: top center;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat;
+  transition: all 5s ease-out 0.5s;
+  -webkit-transition: all 5s ease-out 0.5s;
+  -moz-transition: all 5s ease-out 0.5s;
+  -ms-transition: all 5s ease-out 0.5s;
+  -o-transition: all 5s ease-out 0.5s;
+}
+
+.project-box:hover {
+  /* background-image: url(https://themes.getbootstrap.com/wp-content/uploads/2021/05/soft-ui-design-system-thumbnail-1200x900.jpg);
+  text-decoration: none;
+  border-color: transparent; */
+  background-position: bottom center !important;
+  /* transition: all 5s linear 0;
+  -webkit-transition: all 5s linear 0;
+  -moz-transition: all 5s linear 0;
+  -ms-transition: all 5s linear 0;
+  -o-transition: all 5s linear 0; */
+}
+
+.none{
+  border: none;
+}
